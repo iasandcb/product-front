@@ -6,13 +6,13 @@ export default function App() {
   const [products, setProducts] = useState([]);
   const fetchProducts = async () => {
     const products = await getProducts();
-    console.log('p', products);
     setProducts(products);
   }
 
   useEffect(() => {
     fetchProducts();
   }, []);
+  
   return (
     <>
       <h1>App</h1>
